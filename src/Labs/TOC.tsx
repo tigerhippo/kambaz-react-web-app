@@ -4,6 +4,14 @@ export default function TOC() {
   return (
     <ul>
       <li>
+        <Link
+          id="wd-github"
+          to="https://github.com/tigerhippo/kambaz-react-web-app/tree/a1"
+        >
+          My GitHub Repo
+        </Link>
+      </li>
+      <li>
         <Link to="/Labs">Labs</Link>
       </li>
       <li>
