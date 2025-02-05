@@ -70,7 +70,7 @@ export default function KambazNavigation() {
       </Link>
       <br />
       <Link
-        to="/Kambaz/Labs"
+        to="/Labs"
         id="wd-labs-link"
         className="list-group-item text-white
                   bg-black text-center border-0"
