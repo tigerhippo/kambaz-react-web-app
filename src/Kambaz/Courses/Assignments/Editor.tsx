@@ -1,105 +1,141 @@
+import { Button, Col, Dropdown, Form, InputGroup, Row } from "react-bootstrap";
+import { FaRegCalendarAlt } from "react-icons/fa";
+
 export default function AssignmentEditor() {
   return (
     <div id="wd-assignments-editor">
-      <label htmlFor="wd-name">Assignment Name</label>
-      <br />
-      <br />
-      <input id="wd-name" value="A1 - ENV + HTML" />
-      <br />
-      <br />
-      <textarea id="wd-description">
-        The assignment is available online Submit a link to the landing page of
-      </textarea>
-      <br />
-      <br />
-      <table>
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-points">Points</label>
-          </td>
-          <td>
-            <input id="wd-points" value={100} />
-          </td>
-        </tr>
-        <br />
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-group">Assignment Group</label>
-          </td>
-          <td>
-            <select id="wd-group">
-              <option value="ASSIGNMENTS">ASSIGNMENTS</option>
-            </select>
-          </td>
-        </tr>
-        <br />
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-display-grade-as">Display Grade as</label>
-          </td>
-          <td>
-            <select id="wd-display-grade-as">
-              <option value="Percentage">Percentage</option>
-            </select>
-          </td>
-        </tr>
-        <br />
-        <tr>
-          <td align="right" valign="top">
-            <label htmlFor="wd-submission-type">Submission Type</label>
-          </td>
-          <td>
-            <select id="wd-submission-type">
-              <option value="Online">Online</option>
-            </select>
-            <br />
-            <br />
-            <label>Online Entry Options</label>
-            <br />
-            <input type="checkbox" id="wd-text-entry" />
-            <label htmlFor="wd-text-entry">Text Entry</label>
-            <br />
-            <input type="checkbox" id="wd-website-url" />
-            <label htmlFor="wd-website-url">Website URL</label>
-            <br />
-            <input type="checkbox" id="wd-media-recordings" />
-            <label htmlFor="wd-media-recordings">Media Recordings</label>
-            <br />
-            <input type="checkbox" id="wd-student-annotation" />
-            <label htmlFor="wd-student-annotation">Student Annotation</label>
-            <br />
-            <input type="checkbox" id="wd-file-upload" />
-            <label htmlFor="wd-file-upload">File Uploads</label>
-            <br />
-            <br />
-            <label htmlFor="wd-assign-to">Assign To</label>
-            <br />
-            <input id="wd-assign-to" value={"Everyone"} />
-            <br />
-            <br />
-            <label htmlFor="wd-due-date">Due</label>
-            <br />
-            <input type="date" id="wd-due-date" value="2024-05-13" />
-            <br />
-            <br />
-            <tr>
-              <td>
-                <label htmlFor="wd-available-from">Available from</label>
-                <br />
-                <input type="date" id="wd-available-from" value="2024-05-06" />
-              </td>
-              <td>
-                <label htmlFor="wd-available-until">Until</label>
-                <br />
-                <input type="date" id="wd-available-until" value="2024-05-20" />
-              </td>
-            </tr>
-            <br />
-            <button>Cancel</button>
-            <button>Save</button>
-          </td>
-        </tr>
-      </table>
+      <Form>
+        <Form.Group className="mb-3">
+          <Form.Label>Assignment Name</Form.Label>
+          <Form.Control type="text" placeholder="A1" />
+          <Form.Control
+            className="mt-3"
+            as="textarea"
+            rows={12}
+            placeholder={`The assignment is available online\n\nSubmit a link to the landing page of your Web application running on Netlify.\n\nThe landing page should include the following:\n\nYour full name and section\nLinks to each of the lab assignments\nLink to the Kanbas application\nLinks to all relevant source code repositories\n\nThe Kanbas application should include a link to navigate back to the landing page`}
+          />
+        </Form.Group>
+        <Form.Group as={Row} className="mb-3">
+          <Form.Label column sm="4">
+            Points
+          </Form.Label>
+          <Col sm={8}>
+            <Form.Control type="text" />
+          </Col>
+        </Form.Group>
+        <Form.Group as={Row} className="mb-3">
+          <Form.Label column sm="4">
+            Assignment Group
+          </Form.Label>
+          <Col sm={8}>
+            <Dropdown>
+              <Dropdown.Toggle className="bg-light text-dark">
+                ASSIGNMENTS
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item>ASSIGNMENTS</Dropdown.Item>
+                <Dropdown.Item>QUIZZES</Dropdown.Item>
+                <Dropdown.Item>PROJECTS</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </Col>
+        </Form.Group>
+        <Form.Group as={Row} className="mb-3">
+          <Form.Label column sm="4">
+            Display Grade as
+          </Form.Label>
+          <Col sm={8}>
+            <Dropdown>
+              <Dropdown.Toggle className="bg-light text-dark">
+                Percentage
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item>Percentage</Dropdown.Item>
+                <Dropdown.Item>Letter</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </Col>
+        </Form.Group>
+        <Form.Group as={Row} className="mb-3">
+          <Form.Label column sm="4">
+            Submission Type
+          </Form.Label>
+          <Col sm={8}>
+            <Dropdown className="mb-3">
+              <Dropdown.Toggle className="bg-light text-dark">
+                Online
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item>Online</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Form.Group>
+              <Form.Label className="fw-bold fs-6">
+                Online Entry Options
+              </Form.Label>
+              <Form.Check type="checkbox" label="Text Entry" />
+              <Form.Check type="checkbox" label="Website URL" />
+              <Form.Check type="checkbox" label="Media Recordings" />
+              <Form.Check type="checkbox" label="Student Annotation" />
+              <Form.Check type="checkbox" label="File Uploads" />
+            </Form.Group>
+          </Col>
+        </Form.Group>
+        <Form.Group as={Row} className="mb-3">
+          <Form.Label column sm="4">
+            Assign
+          </Form.Label>
+          <Col sm={8}>
+            <Form.Group className="mb-3">
+              <Form.Label className="fw-bold fs-6">Assign To</Form.Label>
+              <Form.Control type="text" placeholder="Everyone" />
+            </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label className="fw-bold fs-6">Due</Form.Label>
+              <InputGroup>
+                <Form.Control
+                  type="text"
+                  placeholder="May 13, 2024, 11:59 PM"
+                />
+                <InputGroup.Text>
+                  <FaRegCalendarAlt />
+                </InputGroup.Text>
+              </InputGroup>
+            </Form.Group>
+            <div className="d-flex mb-3">
+              <Form.Group className="me-2">
+                <Form.Label className="fw-bold fs-6">Available From</Form.Label>
+                <InputGroup>
+                  <Form.Control
+                    type="text"
+                    placeholder="May 6, 2024, 11:59 PM"
+                  />
+                  <InputGroup.Text>
+                    <FaRegCalendarAlt />
+                  </InputGroup.Text>
+                </InputGroup>
+              </Form.Group>
+              <Form.Group>
+                <Form.Label className="fw-bold fs-6">Until</Form.Label>
+                <InputGroup>
+                  <Form.Control type="text" />
+                  <InputGroup.Text>
+                    <FaRegCalendarAlt />
+                  </InputGroup.Text>
+                </InputGroup>
+              </Form.Group>
+            </div>
+          </Col>
+        </Form.Group>
+        <div className="d-flex justify-content-end">
+          <Button variant="secondary" size="lg" className="me-2">
+            Cancel
+          </Button>
+          <Button variant="danger" size="lg" className="me-2">
+            Save
+          </Button>
+        </div>
+      </Form>
     </div>
   );
 }
