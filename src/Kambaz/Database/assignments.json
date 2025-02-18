@@ -1,0 +1,170 @@
+[
+    { 
+        "_id": "A101", 
+        "title": "Propulsion Assignment", 
+        "course": "RS101", 
+        "notAvailableUntil": "May 6 at 11:59pm", 
+        "due": "May 13 at 11:59pm" 
+    },
+    { 
+        "_id": "A102", 
+        "title": "Combustion Analysis", 
+        "course": "RS101",
+        "notAvailableUntil": "May 13 at 11:59pm",
+        "due": "May 20 at 11:59pm"
+    },
+    { 
+        "_id": "A103", 
+        "title": "Nozzle Design Project", 
+        "course": "RS101",
+        "notAvailableUntil": "May 20 at 11:59pm",
+        "due": "May 27 at 11:59pm"
+    },
+    { 
+        "_id": "A201", 
+        "title": "Aerodynamics Quiz", 
+        "course": "RS102",
+        "notAvailableUntil": "May 6 at 11:59pm",
+        "due": "May 13 at 11:59pm"
+    },
+    { 
+        "_id": "A202", 
+        "title": "Flow Analysis", 
+        "course": "RS102",
+        "notAvailableUntil": "May 13 at 11:59pm",
+        "due": "May 20 at 11:59pm"
+    },
+    { 
+        "_id": "A203", 
+        "title": "Heating Analysis", 
+        "course": "RS102",
+        "notAvailableUntil": "May 20 at 11:59pm",
+        "due": "May 27 at 11:59pm"
+    },
+    { 
+        "_id": "A301", 
+        "title": "Structural Design Task", 
+        "course": "RS103",
+        "notAvailableUntil": "May 6 at 11:59pm",
+        "due": "May 13 at 11:59pm"
+    },
+    { 
+        "_id": "A302", 
+        "title": "Orbital Calculations", 
+        "course": "RS103",
+        "notAvailableUntil": "May 13 at 11:59pm",
+        "due": "May 20 at 11:59pm"
+    },
+    { 
+        "_id": "A303", 
+        "title": "Systems Engineering Exam", 
+        "course": "RS103",
+        "notAvailableUntil": "May 20 at 11:59pm",
+        "due": "May 27 at 11:59pm"
+    },
+    { 
+        "_id": "A401", 
+        "title": "Structural Organic Chemistry Assignment", 
+        "course": "RS104",
+        "notAvailableUntil": "May 6 at 11:59pm",
+        "due": "May 13 at 11:59pm"
+    },
+    { 
+        "_id": "A402", 
+        "title": "Theoretical Organic Chemistry Assignment", 
+        "course": "RS104",
+        "notAvailableUntil": "May 13 at 11:59pm",
+        "due": "May 20 at 11:59pm"
+    },
+    { 
+        "_id": "A403", 
+        "title": "Organic Chemistry Theory Lab Assignment", 
+        "course": "RS104",
+        "notAvailableUntil": "May 20 at 11:59pm",
+        "due": "May 27 at 11:59pm"
+    },
+    { 
+        "_id": "A501", 
+        "title": "Ligand Types Assignment", 
+        "course": "RS105",
+        "notAvailableUntil": "May 6 at 11:59pm",
+        "due": "May 13 at 11:59pm"
+    },
+    { 
+        "_id": "A502", 
+        "title": "Crystal Field Theory Assignment", 
+        "course": "RS105",
+        "notAvailableUntil": "May 13 at 11:59pm",
+        "due": "May 20 at 11:59pm"
+    },
+    { 
+        "_id": "A503", 
+        "title": "Coordination Chemistry Lab Assignment", 
+        "course": "RS105",
+        "notAvailableUntil": "May 20 at 11:59pm",
+        "due": "May 27 at 11:59pm"
+    },
+    { 
+        "_id": "A601", 
+        "title": "Laws of Thermodynamics Assignment", 
+        "course": "RS106",
+        "notAvailableUntil": "May 6 at 11:59pm",
+        "due": "May 13 at 11:59pm"
+    },
+    { 
+        "_id": "A602", 
+        "title": "Gibbs Free Energy Assignment", 
+        "course": "RS106",
+        "notAvailableUntil": "May 13 at 11:59pm",
+        "due": "May 20 at 11:59pm"
+    },
+    { 
+        "_id": "A603", 
+        "title": "Thermodynamic Concepts Lab Assignment", 
+        "course": "RS106",
+        "notAvailableUntil": "May 20 at 11:59pm",
+        "due": "May 27 at 11:59pm"
+    },
+    { 
+        "_id": "A701", 
+        "title": "Phonetics and Phonology of Elvish Quiz", 
+        "course": "RS107",
+        "notAvailableUntil": "May 6 at 11:59pm",
+        "due": "May 13 at 11:59pm"
+    },
+    { 
+        "_id": "A702", 
+        "title": "Syntax and Semantics of Elvish Quiz", 
+        "course": "RS107",
+        "notAvailableUntil": "May 13 at 11:59pm",
+        "due": "May 20 at 11:59pm"
+    },
+    { 
+        "_id": "A703", 
+        "title": "Sociolinguistics of Elvish Quiz", 
+        "course": "RS107",
+        "notAvailableUntil": "May 20 at 11:59pm",
+        "due": "May 27 at 11:59pm"
+    },
+    { 
+        "_id": "A801", 
+        "title": "Wizard Basics Assignment", 
+        "course": "RS108",
+        "notAvailableUntil": "May 6 at 11:59pm",
+        "due": "May 13 at 11:59pm"
+    },
+    { 
+        "_id": "A802", 
+        "title": "Interacting with Wizards Assignment", 
+        "course": "RS108",
+        "notAvailableUntil": "May 13 at 11:59pm",
+        "due": "May 20 at 11:59pm"
+    },
+    { 
+        "_id": "A803", 
+        "title": "History of Wizards Project", 
+        "course": "RS108",
+        "notAvailableUntil": "May 20 at 11:59pm",
+        "due": "May 27 at 11:59pm"
+    }
+]
