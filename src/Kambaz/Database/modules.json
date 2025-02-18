@@ -1,0 +1,626 @@
+[
+    {
+      "_id": "M101",
+      "name": "Introduction to Rocket Propulsion",
+      "description": "Basic principles of rocket propulsion and rocket engines.",
+      "course": "RS101",
+      "lessons": [
+        {
+          "_id": "L101",
+          "name": "History of Rocketry",
+          "description": "A brief history of rocketry and space exploration.",
+          "module": "M101"
+        },
+        {
+          "_id": "L102",
+          "name": "Rocket Propulsion Fundamentals",
+          "description": "Basic principles of rocket propulsion.",
+          "module": "M101"
+        },
+        {
+          "_id": "L103",
+          "name": "Rocket Engine Types",
+          "description": "Overview of different types of rocket engines.",
+          "module": "M101"
+        }
+      ]
+    },
+    {
+      "_id": "M102",
+      "name": "Fuel and Combustion",
+      "description": "Understanding rocket fuel, combustion processes, and efficiency.",
+      "course": "RS101",
+      "lessons": [
+        {
+          "_id": "L201",
+          "name": "Rocket Fuel",
+          "description": "Overview of different types of rocket fuels.",
+          "module": "M102"
+        },
+        {
+          "_id": "L202",
+          "name": "Combustion Processes",
+          "description": "Understanding combustion processes and efficiency.",
+          "module": "M102"
+        },
+        {
+          "_id": "L203",
+          "name": "Combustion Instability",
+          "description": "Understanding combustion instability and mitigation.",
+          "module": "M102"
+        }
+      ]
+    },
+    {
+      "_id": "M103",
+      "name": "Nozzle Design",
+      "description": "Principles of rocket nozzle design and performance optimization.",
+      "course": "RS101",
+      "lessons": [
+        {
+          "_id": "L301",
+          "name": "Nozzle Design",
+          "description": "Overview of different types of rocket nozzles.",
+          "module": "M103"
+        },
+        {
+          "_id": "L302",
+          "name": "Nozzle Performance",
+          "description": "Understanding nozzle performance and efficiency.",
+          "module": "M103"
+        },
+        {
+          "_id": "L303",
+          "name": "Nozzle Optimization",
+          "description": "Optimizing nozzle design for specific applications.",
+          "module": "M103"
+        }
+      ]
+    },
+    {
+      "_id": "M201",
+      "name": "Fundamentals of Aerodynamics",
+      "description": "Basic aerodynamic concepts and fluid dynamics principles.",
+      "course": "RS102",
+      "lessons": [
+        {
+          "_id": "L101",
+          "name": "Basic Aerodynamic Concepts",
+          "description": "Overview of the four forces of flight, drag, and Reynold's Number.",
+          "module": "M201"
+        },
+        {
+          "_id": "L102",
+          "name": "Fluid Dynamics Principles",
+          "description": "Overview of fluid properties, the types of fluid flow, and Bernoulli's Principle.",
+          "module": "M201"
+        },
+        {
+          "_id": "L103",
+          "name": "Lab Exercise",
+          "description": "A lab exercise to illustrate basic aerodynamic concepts and fluid dyanmics principles.",
+          "module": "M201"
+        }
+      ]
+    },
+    {
+      "_id": "M202",
+      "name": "Subsonic and Supersonic Flow",
+      "description": "Understanding subsonic and supersonic aerodynamic behaviors.",
+      "course": "RS102",
+      "lessons": [
+        {
+          "_id": "L201",
+          "name": "Subsonic Behaviors",
+          "description": "Overview of subsonic behaviors.",
+          "module": "M202"
+        },
+        {
+          "_id": "L202",
+          "name": "Supersonic Behaviors",
+          "description": "Overview of supersonic behaviors.",
+          "module": "M202"
+        },
+        {
+          "_id": "L203",
+          "name": "Lab Exercise",
+          "description": "A lab exercise to illustrate subsonic and supersonic aerodynamic behaviors.",
+          "module": "M202"
+        }
+      ]
+    },
+    {
+      "_id": "M203",
+      "name": "Aerodynamic Heating",
+      "description": "Study of aerodynamic heating and thermal protection systems.",
+      "course": "RS102",
+      "lessons": [
+        {
+          "_id": "L301",
+          "name": "Aerodynamic Heating",
+          "description": "Overview of aerodynamic heating.",
+          "module": "M203"
+        },
+        {
+          "_id": "L302",
+          "name": "Thermal Protection Systems",
+          "description": "Overview of thermal protection systems.",
+          "module": "M203"
+        },
+        {
+          "_id": "L303",
+          "name": "Lab Exercise",
+          "description": "A lab exercise to illustrate aerodynamic heating and thermal protection systems.",
+          "module": "M203"
+        }
+      ]
+    },
+    {
+      "_id": "M301",
+      "name": "Spacecraft Structural Design",
+      "description": "Fundamentals of designing spacecraft structures and materials selection.",
+      "course": "RS103",
+      "lessons": [
+        {
+          "_id": "L101",
+          "name": "Designing Spacecraft Structures",
+          "description": "Overview of how to design spacecraft structures.",
+          "module": "M301"
+        },
+        {
+          "_id": "L102",
+          "name": "Materials Selection",
+          "description": "Overview of how to select materials for spacecraft design.",
+          "module": "M301"
+        },
+        {
+          "_id": "L103",
+          "name": "Lab Exercise",
+          "description": "A lab exercise to illustrate designing spacecraft structures and materials selection.",
+          "module": "M301"
+        }
+      ]
+    },
+    {
+      "_id": "M302",
+      "name": "Orbital Mechanics",
+      "description": "Understanding orbital dynamics and mission planning.",
+      "course": "RS103",
+      "lessons": [
+        {
+          "_id": "L201",
+          "name": "Orbital Dynamics",
+          "description": "Overview of orbital dynamics.",
+          "module": "M302"
+        },
+        {
+          "_id": "L202",
+          "name": "Mission Planning",
+          "description": "Overview of mission planning.",
+          "module": "M302"
+        },
+        {
+          "_id": "L203",
+          "name": "Lab Exercise",
+          "description": "A lab exercise to illustrate orbital dynamics and mission planning.",
+          "module": "M302"
+        }
+      ]
+    },
+    {
+      "_id": "M303",
+      "name": "Spacecraft Systems Engineering",
+      "description": "Overview of spacecraft systems and subsystems engineering.",
+      "course": "RS103",
+      "lessons": [
+        {
+          "_id": "L301",
+          "name": "Spacecraft Systems",
+          "description": "Overview of spacecraft systems.",
+          "module": "M303"
+        },
+        {
+          "_id": "L302",
+          "name": "Subsystems Engineering",
+          "description": "Overview of subsystems engineering.",
+          "module": "M303"
+        },
+        {
+          "_id": "L303",
+          "name": "Lab Exercise",
+          "description": "A lab exercise to illustrate spacecraft systems and subsystems engineering.",
+          "module": "M303"
+        }
+      ]
+    },
+    {
+        "_id": "M401",
+        "name": "Organic chemistry theory",
+        "description": "Overview of structural and theoretical organic chemistry",
+        "course": "RS104",
+        "lessons": [
+          {
+            "_id": "L101",
+            "name": "Structural Organic Chemistry",
+            "description": "Overview of structural organic chemistry.",
+            "module": "M401"
+          },
+          {
+            "_id": "L102",
+            "name": "Theoretical Organic Chemistry",
+            "description": "Overview of theoretical organic chemistry.",
+            "module": "M401"
+          },
+          {
+            "_id": "L103",
+            "name": "Lab Exercise",
+            "description": "A lab exercise to illustrate structural and theoretical organic chemistry concepts.",
+            "module": "M401"
+          }
+        ]
+    },
+    {
+        "_id": "M402",
+        "name": "Organic chemistry reactions",
+        "description": "Overview of organic synthesis and reaction mechanisms",
+        "course": "RS104",
+        "lessons": [
+          {
+            "_id": "L201",
+            "name": "Organic Synthesis",
+            "description": "Overview of organic synthesis.",
+            "module": "M402"
+          },
+          {
+            "_id": "L202",
+            "name": "Reaction Mechanisms",
+            "description": "Overview of the different reaction mechanisms.",
+            "module": "M402"
+          },
+          {
+            "_id": "L203",
+            "name": "Lab Exercise",
+            "description": "A lab exercise to illustrate organic synthesis and reaction mechanisms.",
+            "module": "M402"
+          }
+        ]
+    },
+    {
+        "_id": "M403",
+        "name": "Organic chemistry applications",
+        "description": "Overview of natural products and medicinal chemistry",
+        "course": "RS104",
+        "lessons": [
+          {
+            "_id": "L301",
+            "name": "Natural Products",
+            "description": "Overview of natural products.",
+            "module": "M403"
+          },
+          {
+            "_id": "L302",
+            "name": "Medicinal Chemistry",
+            "description": "Overview of medicinal chemistry.",
+            "module": "M403"
+          },
+          {
+            "_id": "L303",
+            "name": "Lab Exercise",
+            "description": "A lab exercise to illustrate the usefulness of natural products and medicinal chemistry.",
+            "module": "M403"
+          }
+        ]
+    },
+    {
+        "_id": "M501",
+        "name": "Coordination in inorganic chemistry",
+        "description": "Overview of coordination chemistry",
+        "course": "RS105",
+        "lessons": [
+          {
+            "_id": "L101",
+            "name": "Ligand Types",
+            "description": "Overview of ligand types.",
+            "module": "M501"
+          },
+          {
+            "_id": "L102",
+            "name": "Crystal Field Theory",
+            "description": "Overview of crystal field theory.",
+            "module": "M501"
+          },
+          {
+            "_id": "L103",
+            "name": "Lab Exercise",
+            "description": "A lab exercise to illustrate coordination chemistry concepts.",
+            "module": "M501"
+          }
+        ]
+    },
+    {
+        "_id": "M502",
+        "name": "Bioinorganic chemistry",
+        "description": "Overview of bioinorganic chemistry",
+        "course": "RS105",
+        "lessons": [
+          {
+            "_id": "L201",
+            "name": "Metal Compounds",
+            "description": "Overview of metal compounds.",
+            "module": "M502"
+          },
+          {
+            "_id": "L202",
+            "name": "Inorganic Compounds",
+            "description": "Overview of inorganic compounds.",
+            "module": "M502"
+          },
+          {
+            "_id": "L203",
+            "name": "Lab Exercise",
+            "description": "A lab exercise to illustrate bioinorganic chemistry concepts.",
+            "module": "M502"
+          }
+        ]
+    },
+    {
+        "_id": "M503",
+        "name": "Applications of Inorganic Chemistry",
+        "description": "Overview of the possible applications of inorganic chemistry",
+        "course": "RS105",
+        "lessons": [
+          {
+            "_id": "L301",
+            "name": "Industrial Applications",
+            "description": "Overview of industrial applications of inorganic chemistry.",
+            "module": "M503"
+          },
+          {
+            "_id": "L302",
+            "name": "Environmental Applications",
+            "description": "Overview of environmental applications of inorganic chemistry.",
+            "module": "M503"
+          },
+          {
+            "_id": "L303",
+            "name": "Lab Exercise",
+            "description": "A lab exercise to illustrate possible applications of inorganic chemistry.",
+            "module": "M503"
+          }
+        ]
+    },
+    {
+        "_id": "M601",
+        "name": "Thermodynamics",
+        "description": "Overview of thermodynamic concepts",
+        "course": "RS106",
+        "lessons": [
+          {
+            "_id": "L101",
+            "name": "Laws of Thermodynamics",
+            "description": "Overview of thermodynamic laws.",
+            "module": "M601"
+          },
+          {
+            "_id": "L102",
+            "name": "Gibbs Free Energy",
+            "description": "Overview of using the Gibbs Free Energy equation.",
+            "module": "M601"
+          },
+          {
+            "_id": "L103",
+            "name": "Lab Exercise",
+            "description": "A lab exercise to illustrate thermodynamic concepts.",
+            "module": "M601"
+          }
+        ]
+    },
+    {
+        "_id": "M602",
+        "name": "Chemical kinetics and reaction dynamics",
+        "description": "Overview of chemical kinetics and reaction dynamics",
+        "course": "RS106",
+        "lessons": [
+          {
+            "_id": "L201",
+            "name": "Reaction Rate Laws",
+            "description": "Overview of reaction rate laws.",
+            "module": "M602"
+          },
+          {
+            "_id": "L202",
+            "name": "Collision and Transition State Theories",
+            "description": "Overview of collision and transition state theories.",
+            "module": "M602"
+          },
+          {
+            "_id": "L203",
+            "name": "Lab Exercise",
+            "description": "A lab exercise to illustrate chemical kinetics and reaction dynamics.",
+            "module": "M602"
+          }
+        ]
+    },
+    {
+        "_id": "M603",
+        "name": "Quantum Chemistry",
+        "description": "Overview of quantum chemistry concepts",
+        "course": "RS106",
+        "lessons": [
+          {
+            "_id": "L301",
+            "name": "Schrödinger Equation",
+            "description": "Overview of using Schrödinger's Equation.",
+            "module": "M603"
+          },
+          {
+            "_id": "L302",
+            "name": "Wave-Particle Duality",
+            "description": "Overview of wave-particle duality.",
+            "module": "M603"
+          },
+          {
+            "_id": "L303",
+            "name": "Lab Exercise",
+            "description": "A lab exercise to illustrate quantum chemistry concepts.",
+            "module": "M603"
+          }
+        ]
+    },
+    {
+        "_id": "M701",
+        "name": "Elvish",
+        "description": "Overview of the elvish language",
+        "course": "RS107",
+        "lessons": [
+          {
+            "_id": "L101",
+            "name": "Phonetics and Phonology of Elvish",
+            "description": "Overview of phonetic and phonologic structures in elvish.",
+            "module": "M701"
+          },
+          {
+            "_id": "L102",
+            "name": "Syntax and Semantics of Elvish",
+            "description": "Overview of syntactic and semantic structures in elvish.",
+            "module": "M701"
+          },
+          {
+            "_id": "L103",
+            "name": "Sociolinguistics of Elvish",
+            "description": "Overview of sociolinguistic phenomena in elvish.",
+            "module": "M701"
+          }
+        ]
+    },
+    {
+        "_id": "M702",
+        "name": "Dwarvish",
+        "description": "Overview of the dwarvish language",
+        "course": "RS107",
+        "lessons": [
+          {
+            "_id": "L201",
+            "name": "Phonetics and Phonology of Dwarvish",
+            "description": "Overview of phonetic and phonologic structures in dwarvish.",
+            "module": "M702"
+          },
+          {
+            "_id": "L202",
+            "name": "Syntax and Semantics of Dwarvish",
+            "description": "Overview of syntactic and semantic structures in dwarvish.",
+            "module": "M702"
+          },
+          {
+            "_id": "L203",
+            "name": "Sociolinguistics of Dwarvish",
+            "description": "Overview of sociolinguistic phenomena in dwarvish.",
+            "module": "M702"
+          }
+        ]
+    },
+    {
+        "_id": "M703",
+        "name": "Tengwar",
+        "description": "Overview of the tengwar script",
+        "course": "RS107",
+        "lessons": [
+          {
+            "_id": "L301",
+            "name": "Tengwar Alphabet",
+            "description": "Overview of how to write letters and accents in the tengwar alphabet.",
+            "module": "M703"
+          },
+          {
+            "_id": "L302",
+            "name": "Languages of the Tengwar Script",
+            "description": "Overview of languages that use the tengwar script.",
+            "module": "M703"
+          },
+          {
+            "_id": "L303",
+            "name": "History of the Tengwar Script",
+            "description": "Overview of the history of the tengwar script.",
+            "module": "M703"
+          }
+        ]
+    },
+    {
+        "_id": "M801",
+        "name": "Wizards",
+        "description": "Overview of wizards in middle-earth",
+        "course": "RS108",
+        "lessons": [
+          {
+            "_id": "L101",
+            "name": "Wizard Basics",
+            "description": "Overview of wizard behavior and capabilities.",
+            "module": "M801"
+          },
+          {
+            "_id": "L102",
+            "name": "Interacting with Wizards",
+            "description": "Overview of how to successfully interact with wizards.",
+            "module": "M801"
+          },
+          {
+            "_id": "L103",
+            "name": "History of Wizards",
+            "description": "Overview of wizard history in middle-earth",
+            "module": "M801"
+          }
+        ]
+    },
+    {
+        "_id": "M802",
+        "name": "Elves",
+        "description": "Overview of elves in middle-earth",
+        "course": "RS108",
+        "lessons": [
+          {
+            "_id": "L201",
+            "name": "Elf Basics",
+            "description": "Overview of elf behavior and capabilities.",
+            "module": "M802"
+          },
+          {
+            "_id": "L202",
+            "name": "Interacting with Elves",
+            "description": "Overview of how to successfully interact with elves.",
+            "module": "M802"
+          },
+          {
+            "_id": "L203",
+            "name": "History of Elves",
+            "description": "Overview of elf history in middle-earth",
+            "module": "M802"
+          }
+        ]
+    },
+    {
+        "_id": "M803",
+        "name": "Men",
+        "description": "Overview of men in middle-earth",
+        "course": "RS108",
+        "lessons": [
+          {
+            "_id": "L301",
+            "name": "Man Basics",
+            "description": "Overview of man behavior and capabilities.",
+            "module": "M803"
+          },
+          {
+            "_id": "L302",
+            "name": "Interacting with Men",
+            "description": "Overview of how to successfully interact with men.",
+            "module": "M803"
+          },
+          {
+            "_id": "L303",
+            "name": "History of Men",
+            "description": "Overview of man history in middle-earth",
+            "module": "M803"
+          }
+        ]
+    }
+]
