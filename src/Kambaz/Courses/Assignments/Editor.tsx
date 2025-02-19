@@ -1,18 +1,24 @@
 import { Button, Col, Dropdown, Form, InputGroup, Row } from "react-bootstrap";
 import { FaRegCalendarAlt } from "react-icons/fa";
+import { useParams } from "react-router";
+import * as db from "../../Database";
+import { Link } from "react-router-dom";
 
 export default function AssignmentEditor() {
+  const { cid, aid } = useParams();
+  const assignments = db.assignments;
+  const assignment = assignments.find((assignment) => assignment._id === aid);
   return (
     <div id="wd-assignments-editor">
       <Form>
         <Form.Group className="mb-3">
           <Form.Label>Assignment Name</Form.Label>
-          <Form.Control type="text" placeholder="A1" />
+          <Form.Control type="text" placeholder={`${assignment?.title}`} />
           <Form.Control
             className="mt-3"
             as="textarea"
             rows={12}
-            placeholder={`The assignment is available online\n\nSubmit a link to the landing page of your Web application running on Netlify.\n\nThe landing page should include the following:\n\nYour full name and section\nLinks to each of the lab assignments\nLink to the Kanbas application\nLinks to all relevant source code repositories\n\nThe Kanbas application should include a link to navigate back to the landing page`}
+            placeholder={`${assignment?.description}`}
           />
         </Form.Group>
         <Form.Group as={Row} className="mb-3">
@@ -20,7 +26,7 @@ export default function AssignmentEditor() {
             Points
           </Form.Label>
           <Col sm={8}>
-            <Form.Control type="text" />
+            <Form.Control type="text" placeholder={`${assignment?.points}`} />
           </Col>
         </Form.Group>
         <Form.Group as={Row} className="mb-3">
@@ -93,10 +99,7 @@ export default function AssignmentEditor() {
             <Form.Group className="mb-3">
               <Form.Label className="fw-bold fs-6">Due</Form.Label>
               <InputGroup>
-                <Form.Control
-                  type="text"
-                  placeholder="May 13, 2024, 11:59 PM"
-                />
+                <Form.Control type="text" placeholder={`${assignment?.due}`} />
                 <InputGroup.Text>
                   <FaRegCalendarAlt />
                 </InputGroup.Text>
@@ -108,7 +111,7 @@ export default function AssignmentEditor() {
                 <InputGroup>
                   <Form.Control
                     type="text"
-                    placeholder="May 6, 2024, 11:59 PM"
+                    placeholder={`${assignment?.notAvailableUntil}`}
                   />
                   <InputGroup.Text>
                     <FaRegCalendarAlt />
@@ -128,12 +131,16 @@ export default function AssignmentEditor() {
           </Col>
         </Form.Group>
         <div className="d-flex justify-content-end">
-          <Button variant="secondary" size="lg" className="me-2">
-            Cancel
-          </Button>
-          <Button variant="danger" size="lg" className="me-2">
-            Save
-          </Button>
+          <Link to={`/Kambaz/Courses/${cid}/Assignments`}>
+            <Button variant="secondary" size="lg" className="me-2">
+              Cancel
+            </Button>
+          </Link>
+          <Link to={`/Kambaz/Courses/${cid}/Assignments`}>
+            <Button variant="danger" size="lg" className="me-2">
+              Save
+            </Button>
+          </Link>
         </div>
       </Form>
     </div>

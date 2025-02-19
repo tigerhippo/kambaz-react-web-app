@@ -48,7 +48,7 @@ export default function TOC() {
       <Nav.Item>
         <Nav.Link
           id="wd-github"
-          href="https://github.com/tigerhippo/kambaz-react-web-app/tree/a2"
+          href="https://github.com/tigerhippo/kambaz-react-web-app/tree/a3"
         >
           My GitHub
         </Nav.Link>

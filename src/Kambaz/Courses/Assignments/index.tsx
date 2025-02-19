@@ -46,8 +46,8 @@ export default function Assignments() {
                         <span className="fw-bold">Not available until</span>{" "}
                         {assignment.notAvailableUntil} |
                         <br />
-                        <span className="fw-bold">Due</span> {assignment.due} |
-                        100 pts
+                        <span className="fw-bold">Due</span> {assignment.due} |{" "}
+                        {assignment.points}
                       </span>
                     </div>
                   </div>
