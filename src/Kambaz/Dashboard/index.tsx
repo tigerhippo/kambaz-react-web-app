@@ -22,34 +22,42 @@ export default function Dashboard({
   return (
     <div id="wd-dashboard">
       <h1 id="wd-dashboard-title">Dashboard</h1> <hr />
-      <h5>
-        New Course
-        <button
-          className="btn btn-primary float-end"
-          id="wd-add-new-course-click"
-          onClick={addNewCourse}
-        >
-          {" "}
-          Add{" "}
-        </button>
-        <button
-          className="btn btn-warning float-end me-2"
-          onClick={updateCourse}
-          id="wd-update-course-click"
-        >
-          Update
-        </button>
-      </h5>
+      {currentUser.role === "FACULTY" && (
+        <h5>
+          New Course
+          <button
+            className="btn btn-primary float-end"
+            id="wd-add-new-course-click"
+            onClick={addNewCourse}
+          >
+            {" "}
+            Add{" "}
+          </button>
+          <button
+            className="btn btn-warning float-end me-2"
+            onClick={updateCourse}
+            id="wd-update-course-click"
+          >
+            Update
+          </button>
+        </h5>
+      )}
       <br />
-      <FormControl
-        value={course.name}
-        className="mb-2"
-        onChange={(e) => setCourse({ ...course, name: e.target.value })}
-      />
-      <FormControl
-        value={course.description}
-        onChange={(e) => setCourse({ ...course, description: e.target.value })}
-      />
+      {currentUser.role === "FACULTY" && (
+        <FormControl
+          value={course.name}
+          className="mb-2"
+          onChange={(e) => setCourse({ ...course, name: e.target.value })}
+        />
+      )}
+      {currentUser.role === "FACULTY" && (
+        <FormControl
+          value={course.description}
+          onChange={(e) =>
+            setCourse({ ...course, description: e.target.value })
+          }
+        />
+      )}
       <hr />
       <h2 id="wd-dashboard-published">
         Published Courses ({courses.length})
@@ -89,26 +97,30 @@ export default function Dashboard({
                         {course.description}{" "}
                       </Card.Text>
                       <Button variant="primary"> Go </Button>
-                      <Button
-                        onClick={(e) => {
-                          e.preventDefault();
-                          deleteCourse(course._id);
-                        }}
-                        className="btn btn-danger float-end"
-                        id="wd-delete-course-click"
-                      >
-                        Delete
-                      </Button>
-                      <Button
-                        id="wd-edit-course-click"
-                        onClick={(event) => {
-                          event.preventDefault();
-                          setCourse(course);
-                        }}
-                        className="btn btn-warning me-2 float-end"
-                      >
-                        Edit
-                      </Button>
+                      {currentUser.role === "FACULTY" && (
+                        <Button
+                          onClick={(e) => {
+                            e.preventDefault();
+                            deleteCourse(course._id);
+                          }}
+                          className="btn btn-danger float-end"
+                          id="wd-delete-course-click"
+                        >
+                          Delete
+                        </Button>
+                      )}
+                      {currentUser.role === "FACULTY" && (
+                        <Button
+                          id="wd-edit-course-click"
+                          onClick={(event) => {
+                            event.preventDefault();
+                            setCourse(course);
+                          }}
+                          className="btn btn-warning me-2 float-end"
+                        >
+                          Edit
+                        </Button>
+                      )}
                     </Card.Body>
                   </Link>
                 </Card>

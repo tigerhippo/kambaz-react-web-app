@@ -1,13 +1,20 @@
-import { Button, Col, Dropdown, Form, InputGroup, Row } from "react-bootstrap";
+import { Button, Col, Form, InputGroup, Row } from "react-bootstrap";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { useParams } from "react-router";
 import * as db from "../../Database";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function AssignmentEditor() {
   const { cid, aid } = useParams();
   const assignments = db.assignments;
   const assignment = assignments.find((assignment) => assignment._id === aid);
+  const navigate = useNavigate();
+  const handleCancel = () => {
+    navigate(`/Kambaz/Courses/${cid}/Assignments`);
+  };
+  const handleSave = () => {
+    navigate(`/Kambaz/Courses/${cid}/Assignments`);
+  };
   return (
     <div id="wd-assignments-editor">
       <Form>
@@ -31,71 +38,9 @@ export default function AssignmentEditor() {
         </Form.Group>
         <Form.Group as={Row} className="mb-3">
           <Form.Label column sm="4">
-            Assignment Group
-          </Form.Label>
-          <Col sm={8}>
-            <Dropdown>
-              <Dropdown.Toggle className="bg-light text-dark">
-                ASSIGNMENTS
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item>ASSIGNMENTS</Dropdown.Item>
-                <Dropdown.Item>QUIZZES</Dropdown.Item>
-                <Dropdown.Item>PROJECTS</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </Col>
-        </Form.Group>
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column sm="4">
-            Display Grade as
-          </Form.Label>
-          <Col sm={8}>
-            <Dropdown>
-              <Dropdown.Toggle className="bg-light text-dark">
-                Percentage
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item>Percentage</Dropdown.Item>
-                <Dropdown.Item>Letter</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </Col>
-        </Form.Group>
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column sm="4">
-            Submission Type
-          </Form.Label>
-          <Col sm={8}>
-            <Dropdown className="mb-3">
-              <Dropdown.Toggle className="bg-light text-dark">
-                Online
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item>Online</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-            <Form.Group>
-              <Form.Label className="fw-bold fs-6">
-                Online Entry Options
-              </Form.Label>
-              <Form.Check type="checkbox" label="Text Entry" />
-              <Form.Check type="checkbox" label="Website URL" />
-              <Form.Check type="checkbox" label="Media Recordings" />
-              <Form.Check type="checkbox" label="Student Annotation" />
-              <Form.Check type="checkbox" label="File Uploads" />
-            </Form.Group>
-          </Col>
-        </Form.Group>
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column sm="4">
             Assign
           </Form.Label>
           <Col sm={8}>
-            <Form.Group className="mb-3">
-              <Form.Label className="fw-bold fs-6">Assign To</Form.Label>
-              <Form.Control type="text" placeholder="Everyone" />
-            </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label className="fw-bold fs-6">Due</Form.Label>
               <InputGroup>
@@ -131,16 +76,22 @@ export default function AssignmentEditor() {
           </Col>
         </Form.Group>
         <div className="d-flex justify-content-end">
-          <Link to={`/Kambaz/Courses/${cid}/Assignments`}>
-            <Button variant="secondary" size="lg" className="me-2">
-              Cancel
-            </Button>
-          </Link>
-          <Link to={`/Kambaz/Courses/${cid}/Assignments`}>
-            <Button variant="danger" size="lg" className="me-2">
-              Save
-            </Button>
-          </Link>
+          <Button
+            variant="secondary"
+            size="lg"
+            className="me-2"
+            onClick={handleCancel}
+          >
+            Cancel
+          </Button>
+          <Button
+            variant="danger"
+            size="lg"
+            className="me-2"
+            onClick={handleSave}
+          >
+            Save
+          </Button>
         </div>
       </Form>
     </div>
