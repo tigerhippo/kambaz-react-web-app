@@ -2,8 +2,9 @@ import Button from "react-bootstrap/esm/Button";
 import ListGroup from "react-bootstrap/esm/ListGroup";
 import { useDispatch } from "react-redux";
 import { deleteTodo, setTodo } from "./todosReducer";
+import { Todo } from "../../../../types";
 
-export default function TodoItem({ todo }) {
+export default function TodoItem(todo: Todo) {
   const dispatch = useDispatch();
   return (
     <ListGroup.Item key={todo.id}>

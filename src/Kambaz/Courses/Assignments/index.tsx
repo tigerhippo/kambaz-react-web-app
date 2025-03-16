@@ -8,6 +8,7 @@ import AssignmentsControlButtons from "./AssignmentsControlButtons";
 import AssignmentsControls from "./AssignmentsControls";
 import { deleteAssignment } from "./reducer";
 import { useSelector, useDispatch } from "react-redux";
+import { Assignment } from "../../../types";
 
 export default function Assignments() {
   const { cid } = useParams();
@@ -31,8 +32,8 @@ export default function Assignments() {
           </div>
           <ListGroup className="wd-assignments-list rounded-0">
             {assignments
-              .filter((assignment) => assignment.course === cid)
-              .map((assignment) => (
+              .filter((assignment: Assignment) => assignment.course === cid)
+              .map((assignment: Assignment) => (
                 <ListGroup.Item className="wd-assignment d-flex justify-content-between align-items-center p-3 ps-1">
                   <div className="d-flex align-items-center">
                     {currentUser.role === "FACULTY" && (

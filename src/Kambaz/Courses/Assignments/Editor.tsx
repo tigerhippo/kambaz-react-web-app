@@ -5,12 +5,14 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addAssignment, updateAssignment } from "./reducer";
-
+import { Assignment } from "../../../types.ts";
 export default function AssignmentEditor() {
   const { cid, aid } = useParams();
   const { assignments } = useSelector((state: any) => state.assignmentsReducer);
   const assignment =
-    aid === "NewAssignment" ? null : assignments.find((a) => a._id === aid);
+    aid === "NewAssignment"
+      ? null
+      : assignments.find((a: Assignment) => a._id === aid);
   const [assignmentName, setAssignmentName] = useState(
     assignment ? assignment.title : ""
   );
