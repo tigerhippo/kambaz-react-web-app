@@ -4,8 +4,7 @@ import { Button, Form, InputGroup } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function AssignmentsControls() {
-  const { cid, aid } = useParams();
-  console.log(aid);
+  const { cid } = useParams();
   const navigate = useNavigate();
   const goToEditor = () => {
     navigate(`/Kambaz/Courses/${cid}/Assignments/NewAssignment`);

@@ -1,36 +1,23 @@
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
-import * as db from "../../Database";
 import { ListGroup } from "react-bootstrap";
 import { BsGripVertical } from "react-icons/bs";
 import { MdAssignment } from "react-icons/md";
 import AssignmentControlButtons from "./AssignmentControlButtons";
 import AssignmentsControlButtons from "./AssignmentsControlButtons";
 import AssignmentsControls from "./AssignmentsControls";
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import { deleteAssignment } from "./reducer";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Assignments() {
   const { cid } = useParams();
-  const [assignmentName, setAssignmentName] = useState("");
-  const [assignmentDescription, setAssignmentDescription] = useState("");
-  const [assignmentPoints, setAssignmentPoints] = useState("");
-  const [assignmentDue, setAssignmentDue] = useState("");
-  const [assignmentAvailableFrom, setAssignmentAvailableFrom] = useState("");
-  const assignments = db.assignments;
+  const { assignments } = useSelector((state: any) => state.assignmentsReducer);
   const { currentUser } = useSelector((state: any) => state.accountReducer);
+  const dispatch = useDispatch();
 
   return (
     <div>
-      {currentUser.role === "FACULTY" && (
-        <AssignmentsControls
-          setAssignmentName={setAssignmentName}
-          setAssignmentDescription={setAssignmentDescription}
-          setAssignmentPoints={setAssignmentPoints}
-          setAssignmentDue={setAssignmentDue}
-          setAssignmentAvailableFrom={setAssignmentAvailableFrom}
-        />
-      )}
+      {currentUser.role === "FACULTY" && <AssignmentsControls />}
       <br />
       <br />
       <ListGroup className="rounded-0" id="wd-all-assignments">
@@ -79,7 +66,13 @@ export default function Assignments() {
                     </div>
                   </div>
                   {currentUser.role === "FACULTY" && (
-                    <AssignmentControlButtons />
+                    <AssignmentControlButtons
+                      assignmentId={assignment._id}
+                      assignmentName={assignment.title}
+                      deleteAssignment={(assignmentId) => {
+                        dispatch(deleteAssignment(assignmentId));
+                      }}
+                    />
                   )}
                 </ListGroup.Item>
               ))}
