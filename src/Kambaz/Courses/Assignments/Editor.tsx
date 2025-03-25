@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Button, Col, Form, InputGroup, Row } from "react-bootstrap";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { useParams } from "react-router";
@@ -5,14 +6,13 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addAssignment, updateAssignment } from "./reducer";
-import { Assignment } from "../../../types.ts";
 export default function AssignmentEditor() {
   const { cid, aid } = useParams();
   const { assignments } = useSelector((state: any) => state.assignmentsReducer);
   const assignment =
     aid === "NewAssignment"
       ? null
-      : assignments.find((a: Assignment) => a._id === aid);
+      : assignments.find((a: any) => a._id === aid);
   const [assignmentName, setAssignmentName] = useState(
     assignment ? assignment.title : ""
   );

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Button from "react-bootstrap/esm/Button";
 import FormControl from "react-bootstrap/esm/FormControl";
 import ListGroup from "react-bootstrap/esm/ListGroup";

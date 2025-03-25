@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useSelector } from "react-redux";
 import { Routes, Route, Navigate } from "react-router";
 import AccountNavigation from "./Navigation";

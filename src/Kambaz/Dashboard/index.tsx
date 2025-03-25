@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useSelector } from "react-redux";
 import * as db from "../Database";
 import { Button, Card, Col, FormControl, Row } from "react-bootstrap";
