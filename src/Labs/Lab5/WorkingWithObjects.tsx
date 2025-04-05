@@ -42,6 +42,45 @@ export default function WorkingWithObjects() {
         }
       />
       <hr />
+      <input
+        type="checkbox"
+        id="wd-assignment-completed"
+        className="form-check-input me-2"
+        defaultChecked={assignment.completed}
+        onChange={(e) =>
+          setAssignment({
+            ...assignment,
+            completed: e.target.checked,
+          })
+        }
+      />
+      <a
+        id="wd-update-assignment-completed"
+        className="btn btn-primary w-25"
+        href={`${ASSIGNMENT_API_URL}/completed/${assignment.completed}`}
+      >
+        Update Assignment Completed or Not
+      </a>
+      <hr />
+      <a
+        id="wd-update-assignment-score"
+        className="btn btn-primary float-end"
+        href={`${ASSIGNMENT_API_URL}/score/${assignment.score}`}
+      >
+        Update Assignment Score
+      </a>
+      <FormControl
+        className="w-75"
+        id="wd-assignment-score"
+        defaultValue={assignment.score}
+        onChange={(e) =>
+          setAssignment({
+            ...assignment,
+            score: JSON.parse(e.target.value),
+          })
+        }
+      />
+      <hr />
       <h4>Retrieving Objects</h4>
       <a
         id="wd-retrieve-assignments"
@@ -73,6 +112,20 @@ export default function WorkingWithObjects() {
         id="wd-module-name"
         defaultValue={module.name}
         onChange={(e) => setModule({ ...module, name: e.target.value })}
+      />
+      <hr />
+      <a
+        id="wd-update-module-description"
+        className="btn btn-primary float-end"
+        href={`${MODULE_API_URL}/description/${module.description}`}
+      >
+        Update Module Description
+      </a>
+      <FormControl
+        className="w-75"
+        id="wd-module-description"
+        defaultValue={module.description}
+        onChange={(e) => setModule({ ...module, description: e.target.value })}
       />
       <hr />
       <h4>Retrieving Objects Part 2</h4>
