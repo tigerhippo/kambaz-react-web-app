@@ -71,7 +71,7 @@ export default function WorkingWithArrays() {
         href={`${API}/${todo.id}/title/${todo.title}`}
         className="btn btn-primary float-end"
       >
-        Update Todo
+        Update Todo Title
       </a>
       <FormControl
         defaultValue={todo.id}
@@ -83,6 +83,50 @@ export default function WorkingWithArrays() {
         className="w-50 float-start"
         onChange={(e) => setTodo({ ...todo, title: e.target.value })}
       />
+      <br />
+      <br />
+      <hr />
+      <a
+        href={`${API}/${todo.id}/description/${todo.description}`}
+        className="btn btn-primary float-end"
+      >
+        Update Todo Description
+      </a>
+      <FormControl
+        defaultValue={todo.id}
+        className="w-25 float-start me-2"
+        onChange={(e) => setTodo({ ...todo, id: e.target.value })}
+      />
+      <FormControl
+        defaultValue={todo.description}
+        className="w-50 float-start"
+        onChange={(e) => setTodo({ ...todo, description: e.target.value })}
+      />
+      <br />
+      <br />
+      <hr />
+      <FormControl
+        defaultValue={todo.id}
+        className="w-25 float-start me-2"
+        onChange={(e) => setTodo({ ...todo, id: e.target.value })}
+      />
+      <input
+        type="checkbox"
+        className="form-check-input me-2"
+        defaultChecked={todo.completed}
+        onChange={(e) =>
+          setTodo({
+            ...todo,
+            completed: e.target.checked,
+          })
+        }
+      />
+      <a
+        href={`${API}/${todo.id}/completed/${todo.completed}`}
+        className="btn btn-primary"
+      >
+        Update Todo Completed or Not
+      </a>
       <br />
       <br />
       <hr />
