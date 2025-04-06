@@ -10,8 +10,9 @@ import AssignmentsControlButtons from "./AssignmentsControlButtons";
 import AssignmentsControls from "./AssignmentsControls";
 import { setAssignments, deleteAssignment } from "./reducer";
 import { useSelector, useDispatch } from "react-redux";
-import * as coursesClient from "../client";
 import { useEffect } from "react";
+import * as coursesClient from "../client";
+import * as assignmentsClient from "./client";
 
 export default function Assignments() {
   const { cid } = useParams();
@@ -28,6 +29,10 @@ export default function Assignments() {
   useEffect(() => {
     fetchAssignments();
   }, []);
+  const removeAssignment = async (assignmentId: string) => {
+    await assignmentsClient.deleteAssignment(assignmentId);
+    dispatch(deleteAssignment(assignmentId));
+  };
 
   return (
     <div>
@@ -84,7 +89,7 @@ export default function Assignments() {
                       assignmentId={assignment._id}
                       assignmentName={assignment.title}
                       deleteAssignment={(assignmentId) => {
-                        dispatch(deleteAssignment(assignmentId));
+                        removeAssignment(assignmentId);
                       }}
                     />
                   )}
