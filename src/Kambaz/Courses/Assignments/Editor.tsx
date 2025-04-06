@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addAssignment, updateAssignment } from "./reducer";
+import * as coursesClient from "../client";
+import * as assignmentsClient from "./client";
 export default function AssignmentEditor() {
   const { cid, aid } = useParams();
   const { assignments } = useSelector((state: any) => state.assignmentsReducer);
@@ -29,35 +31,47 @@ export default function AssignmentEditor() {
     assignment ? assignment.due : ""
   );
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
+  const createAssignment = async () => {
+    if (!cid) return;
+    const newAssignment = {
+      title: assignmentName,
+      course: cid,
+      description: assignmentDescription,
+      points: assignmentPoints,
+      notAvailableUntil: assignmentAvailableFrom,
+      due: assignmentDue,
+    };
+    const createdAssignment = await coursesClient.createAssignmentForCourse(
+      cid,
+      newAssignment
+    );
+    dispatch(addAssignment(createdAssignment));
+  };
+  const editAssignment = async () => {
+    const newAssignment = {
+      _id: aid,
+      title: assignmentName,
+      description: assignmentDescription,
+      points: assignmentPoints,
+      notAvailableUntil: assignmentAvailableFrom,
+      due: assignmentDue,
+    };
+    await assignmentsClient.updateAssignment(newAssignment);
+    dispatch(updateAssignment(newAssignment));
+  };
+
+  const navigate = useNavigate();
   const handleCancel = () => {
     navigate(`/Kambaz/Courses/${cid}/Assignments`);
   };
   const handleSave = () => {
     navigate(`/Kambaz/Courses/${cid}/Assignments`);
-    const updatePayload = {
-      _id: aid,
-      title: assignmentName,
-      course: cid,
-      description: assignmentDescription,
-      points: assignmentPoints,
-      notAvailableUntil: assignmentAvailableFrom,
-      due: assignmentDue,
-    };
-    const addPayload = {
-      title: assignmentName,
-      course: cid,
-      description: assignmentDescription,
-      points: assignmentPoints,
-      notAvailableUntil: assignmentAvailableFrom,
-      due: assignmentDue,
-    };
-    const action = assignment
-      ? updateAssignment(updatePayload)
-      : addAssignment(addPayload);
-
-    dispatch(action);
+    if (assignment) {
+      editAssignment();
+    } else {
+      createAssignment();
+    }
   };
 
   return (
