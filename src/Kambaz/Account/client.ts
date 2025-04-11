@@ -22,6 +22,10 @@ export const updateUser = async (user: any) => {
   );
   return response.data;
 };
+export const findAllUsers = async () => {
+  const response = await axiosWithCredentials.get(USERS_API);
+  return response.data;
+};
 export const profile = async () => {
   const response = await axiosWithCredentials.post(`${USERS_API}/profile`);
   return response.data;
