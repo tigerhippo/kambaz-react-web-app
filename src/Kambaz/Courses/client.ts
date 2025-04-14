@@ -13,7 +13,9 @@ export const fetchAllCourses = async () => {
   return data;
 };
 export const findModulesForCourse = async (courseId: string) => {
-  const response = await axios.get(`${COURSES_API}/${courseId}/modules`);
+  const response = await axiosWithCredentials.get(
+    `${COURSES_API}/${courseId}/modules`
+  );
   return response.data;
 };
 export const findAssignmentsForCourse = async (courseId: string) => {
