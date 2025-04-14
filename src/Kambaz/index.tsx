@@ -10,7 +10,6 @@ import "./styles.css";
 import ProtectedRoute from "./Account/ProtectedRoute";
 import Session from "./Account/Session";
 import { useSelector } from "react-redux";
-import * as userClient from "./Account/client";
 import * as courseClient from "./Courses/client";
 export default function Kambaz() {
   const [courses, setCourses] = useState<any[]>([]);
@@ -34,6 +33,7 @@ export default function Kambaz() {
     startDate: "2023-09-10",
     endDate: "2023-12-15",
     imageName: "reactjs.jpg",
+    credits: "4",
     description: "New Description",
   });
 
@@ -50,7 +50,7 @@ export default function Kambaz() {
     );
   };
   const addNewCourse = async () => {
-    const newCourse = await userClient.createCourse(course);
+    const newCourse = await courseClient.createCourse(course);
     setCourses([...courses, newCourse]);
   };
   const deleteCourse = async (courseId: string) => {
