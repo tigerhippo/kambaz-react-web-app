@@ -11,6 +11,7 @@ export default function Dashboard({
   updateCourse,
   enrolling,
   setEnrolling,
+  updateEnrollment,
 }: {
   courses: any[];
   course: any;
@@ -20,6 +21,7 @@ export default function Dashboard({
   updateCourse: () => void;
   enrolling: boolean;
   setEnrolling: (enrolling: boolean) => void;
+  updateEnrollment: (courseId: string, enrolled: boolean) => void;
 }) {
   const { currentUser } = useSelector((state: any) => state.accountReducer);
   return (
@@ -94,6 +96,10 @@ export default function Dashboard({
                     <Card.Title className="wd-dashboard-course-title text-nowrap overflow-hidden">
                       {enrolling && (
                         <button
+                          onClick={(event) => {
+                            event.preventDefault();
+                            updateEnrollment(course._id, !course.enrolled);
+                          }}
                           className={`btn ${
                             course.enrolled ? "btn-danger" : "btn-success"
                           } float-end`}
