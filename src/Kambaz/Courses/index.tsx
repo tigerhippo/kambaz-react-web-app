@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import CourseNavigation from "./Navigation";
 import Modules from "./Modules";
@@ -7,10 +8,28 @@ import AssignmentEditor from "./Assignments/Editor";
 import { Navigate, Route, Routes, useParams, useLocation } from "react-router";
 import { FaAlignJustify } from "react-icons/fa";
 import PeopleTable from "./People/Table";
+import { useEffect, useState } from "react";
+import * as courseClient from "./client";
 export default function Courses({ courses }: { courses: any[] }) {
   const { cid } = useParams();
   const course = courses.find((course) => course._id === cid);
   const { pathname } = useLocation();
+  const [courseUsers, setCourseUsers] = useState<any[]>([]);
+
+  const findUsersForCourse = async () => {
+    try {
+      if (cid) {
+        const users = await courseClient.findUsersForCourse(cid);
+        setCourseUsers(users);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  useEffect(() => {
+    findUsersForCourse();
+  }, [cid]);
+
   return (
     <div id="wd-courses">
       <h2 className="text-danger">
@@ -29,7 +48,10 @@ export default function Courses({ courses }: { courses: any[] }) {
             <Route path="Modules" element={<Modules />} />
             <Route path="Assignments" element={<Assignments />} />
             <Route path="Assignments/:aid" element={<AssignmentEditor />} />
-            <Route path="People" element={<PeopleTable />} />
+            <Route
+              path="People"
+              element={<PeopleTable users={courseUsers} />}
+            />
           </Routes>
         </div>
       </div>
